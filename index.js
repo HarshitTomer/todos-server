@@ -9,7 +9,7 @@ const todoroute = require("./routes/todo");
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+mongoose.set('strictQuery', false);
 app.use('/', loginroute);
 app.use('/', signuproute);
 app.use('/', todoroute);
